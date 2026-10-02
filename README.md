@@ -1,5 +1,7 @@
 # Catistify
 
+A calmer, more beautiful way to understand the cats and dogs who make your family feel like family.
+
 Catistify is a local-first companion for multi-pet households. Create cat and dog profiles, discover personality patterns, keep a shared diary, complete daily bonding missions, compare pets, and export backups.
 
 ## Local development
