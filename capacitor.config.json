@@ -1,0 +1,9 @@
+{
+  "appId": "com.catistify.app",
+  "appName": "Catistify",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  }
+}

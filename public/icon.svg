@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="catistifyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF9F68" />
+      <stop offset="50%" stop-color="#E27341" />
+      <stop offset="100%" stop-color="#8E44AD" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#4A3B32" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Background rounded squircle with safe zone -->
+  <rect width="512" height="512" rx="128" fill="url(#catistifyGrad)" />
+
+  <!-- Inner Soft Ring -->
+  <circle cx="256" cy="256" r="190" fill="#FFF8F0" opacity="0.15" />
+
+  <!-- Paw with Heart Center -->
+  <g filter="url(#shadow)" fill="#FFFFFF">
+    <!-- Top Left Toe (Cat Ear Vibe) -->
+    <ellipse cx="170" cy="180" rx="34" ry="46" transform="rotate(-18 170 180)" />
+    
+    <!-- Top Center Left Toe -->
+    <ellipse cx="230" cy="140" rx="32" ry="48" transform="rotate(-4 230 140)" />
+
+    <!-- Top Center Right Toe -->
+    <ellipse cx="295" cy="142" rx="32" ry="48" transform="rotate(8 295 142)" />
+
+    <!-- Top Right Toe (Dog Ear Vibe) -->
+    <ellipse cx="355" cy="188" rx="34" ry="46" transform="rotate(22 355 188)" />
+
+    <!-- Main Pad Shaped Like a Warm Heart -->
+    <path d="M 256,236 
+             C 210,195 145,230 148,295 
+             C 150,335 186,375 256,415 
+             C 326,375 362,335 364,295 
+             C 367,230 302,195 256,236 Z" />
+  </g>
+
+  <!-- Small playful spark/star in corner -->
+  <path d="M 390 100 Q 405 100 405 85 Q 405 100 420 100 Q 405 100 405 115 Q 405 100 390 100 Z" fill="#FFEAA7" />
+</svg>

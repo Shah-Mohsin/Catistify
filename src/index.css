@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #18212b;
+  --ink-soft: #5b6672;
+  --paper: #f7f5f0;
+  --surface: rgba(255, 255, 255, 0.82);
+  --line: rgba(24, 33, 43, 0.1);
+  --orange: #ff7a45;
+  --blue: #3d73e8;
+  --mint: #4bb58a;
+  --lavender: #9b7ae8;
+}
+
+@layer utilities {
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 1rem);
+  }
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 1rem);
+  }
+}
+
+body {
+  font-family: 'Nunito Sans', system-ui, sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 8% 8%, rgba(255, 190, 135, 0.3), transparent 28rem),
+    radial-gradient(circle at 92% 16%, rgba(158, 190, 255, 0.24), transparent 30rem),
+    linear-gradient(135deg, #faf8f4 0%, #f3f5f2 100%);
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(61, 115, 232, 0.38);
+  outline-offset: 3px;
+}
+
+.app-shell {
+  position: relative;
+  isolation: isolate;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.42), rgba(255, 248, 240, 0.65));
+}
+
+.app-shell::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.38;
+  background-image: linear-gradient(rgba(24, 33, 43, 0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(24, 33, 43, 0.035) 1px, transparent 1px);
+  background-size: 34px 34px;
+  mask-image: linear-gradient(to bottom, black, transparent 80%);
+}
+
+.brand-mark {
+  font-family: 'Varela Round', 'Nunito Sans', sans-serif;
+  letter-spacing: -0.04em;
+}
+
+.depth-surface {
+  box-shadow: 0 2px 0 rgba(255, 255, 255, 0.9) inset, 0 18px 46px rgba(56, 47, 38, 0.08), 0 3px 0 rgba(24, 33, 43, 0.05);
+  backdrop-filter: blur(16px);
+}
+
+.lift-on-hover {
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.lift-on-hover:hover {
+  transform: translateY(-4px) rotateX(1deg);
+  box-shadow: 0 24px 52px rgba(56, 47, 38, 0.12), 0 3px 0 rgba(24, 33, 43, 0.06);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

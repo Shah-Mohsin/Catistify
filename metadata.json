@@ -1,0 +1,6 @@
+{
+  "name": "Catistify - Multi-Pet Companion & Intelligence",
+  "description": "The modern companion app for pet owners: personality psychology profiling, adventure diary, daily quest streaks, AI behavioral insights, comparison analytics, and cross-platform offline sync.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
